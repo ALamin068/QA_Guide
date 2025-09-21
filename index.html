@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Engineer's Handbook - Your Complete Testing Reference</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>📋 QA Handbook</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#getting-started" class="nav-link">Getting Started</a></li>
+                <li><a href="#manual-testing" class="nav-link">Manual Testing</a></li>
+                <li><a href="#java-fundamentals" class="nav-link">Java</a></li>
+                <li><a href="#selenium" class="nav-link">Selenium</a></li>
+                <li><a href="#rest-assured" class="nav-link">REST Assured</a></li>
+                <li><a href="#appium" class="nav-link">Appium</a></li>
+                <li><a href="#sql" class="nav-link">SQL</a></li>
+                <li><a href="#quick-ref" class="nav-link">Quick Ref</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>QA Engineer's Complete Handbook</h1>
+                <p class="hero-subtitle">Your comprehensive reference guide for manual testing, automation, and quality assurance best practices</p>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <h3>🧪 Manual Testing</h3>
+                        <p>Test case design, execution strategies, and bug reporting</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3>☕ Java Fundamentals</h3>
+                        <p>Core Java concepts essential for test automation</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3>🌐 Selenium WebDriver</h3>
+                        <p>Web UI automation with practical examples</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3>🔌 REST Assured</h3>
+                        <p>API testing and validation techniques</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3>📱 Appium</h3>
+                        <p>Mobile automation for Android and iOS</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3>🗃️ SQL for QA</h3>
+                        <p>Database testing and data validation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="getting-started" class="section">
+            <div class="container">
+                <h2>🚀 Getting Started - Your QA Journey</h2>
+
+                <div class="beginner-intro">
+                    <div class="welcome-card">
+                        <h3>👋 Welcome to Quality Assurance!</h3>
+                        <p>Don't worry if you feel overwhelmed - every expert was once a beginner. This guide will walk you through each step, explain everything clearly, and help you when you get stuck.</p>
+
+                        <div class="progress-path">
+                            <h4>📍 Your Learning Path (Follow in Order):</h4>
+                            <ol class="learning-steps">
+                                <li><strong>Week 1-2:</strong> Master Manual Testing fundamentals</li>
+                                <li><strong>Week 3-4:</strong> Learn Java basics for automation</li>
+                                <li><strong>Week 5-6:</strong> Start with Selenium web automation</li>
+                                <li><strong>Week 7-8:</strong> Add API testing with REST Assured</li>
+                                <li><strong>Week 9-10:</strong> Learn SQL for database testing</li>
+                                <li><strong>Week 11-12:</strong> Explore mobile testing with Appium</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card beginner-friendly">
+                        <h3>🎯 What is Quality Assurance?</h3>
+                        <div class="explanation-box">
+                            <p><strong>Simple Definition:</strong> QA ensures software works correctly before customers use it.</p>
+                            <br>
+                            <p><strong>Your Role:</strong> You're like a detective who finds problems and a guardian who prevents bad software from reaching users.</p>
+                        </div>
+
+                        <h4>📋 Daily QA Activities:</h4>
+                        <ul class="activity-list">
+                            <li>🔍 <strong>Testing:</strong> Click buttons, fill forms, try to break things</li>
+                            <li>📝 <strong>Documenting:</strong> Write down what you tested and what you found</li>
+                            <li>🐛 <strong>Bug Reporting:</strong> Tell developers what's broken and how to fix it</li>
+                            <li>🤖 <strong>Automation:</strong> Write code to test things automatically</li>
+                            <li>👥 <strong>Collaboration:</strong> Work with developers, product managers, and other testers</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card beginner-friendly">
+                        <h3>🛠️ Setting Up Your QA Environment</h3>
+
+                        <div class="setup-section">
+                            <h4>Step 1: Essential Software (Install These First)</h4>
+                            <div class="installation-guide">
+                                <div class="software-item">
+                                    <strong>🌐 Web Browser:</strong> Chrome (for consistent testing)
+                                    <br><span class="download-link">Download: google.com/chrome</span>
+                                </div>
+
+                                <div class="software-item">
+                                    <strong>📝 Code Editor:</strong> Visual Studio Code (free and beginner-friendly)
+                                    <br><span class="download-link">Download: code.visualstudio.com</span>
+                                    <br><span class="tip">💡 Tip: Install these VS Code extensions: Java Extension Pack, TestNG</span>
+                                </div>
+
+                                <div class="software-item">
+                                    <strong>☕ Java:</strong> Java Development Kit (JDK) 11 or higher
+                                    <br><span class="download-link">Download: adoptopenjdk.net</span>
+                                    <br><span class="verification">✅ Verify: Open terminal/cmd, type: java -version</span>
+                                </div>
+
+                                <div class="software-item">
+                                    <strong>🏗️ Maven:</strong> Project management tool
+                                    <br><span class="download-link">Download: maven.apache.org</span>
+                                    <br><span class="verification">✅ Verify: Open terminal/cmd, type: mvn -version</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="troubleshooting-box">
+                            <h4>😰 Stuck? Common Setup Issues:</h4>
+                            <details>
+                                <summary>❌ Java command not found</summary>
+                                <p><strong>Solution:</strong> You need to set JAVA_HOME environment variable:</p>
+                                <ol>
+                                    <li>Find where Java is installed (usually C:\Program Files\Java\...)</li>
+                                    <li>Add it to your system PATH</li>
+                                    <li>Restart your computer</li>
+                                    <li>Try 'java -version' again</li>
+                                </ol>
+                            </details>
+
+                            <details>
+                                <summary>❌ Maven not working</summary>
+                                <p><strong>Solution:</strong> Same as Java - add Maven to your PATH variable</p>
+                            </details>
+
+                            <details>
+                                <summary>❌ VS Code can't find Java</summary>
+                                <p><strong>Solution:</strong> Install "Extension Pack for Java" from VS Code marketplace</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="content-card beginner-friendly">
+                        <h3>📚 Your First QA Project</h3>
+
+                        <div class="project-guide">
+                            <h4>🎯 Project: Test a Simple Website</h4>
+                            <p class="project-description">We'll test a basic login page to practice fundamental QA skills.</p>
+
+                            <div class="step-by-step">
+                                <h4>Step 1: Understanding What to Test</h4>
+                                <div class="step-content">
+                                    <p><strong>Website:</strong> Use any demo site like: the-internet.herokuapp.com/login</p>
+                                    <p><strong>What we're testing:</strong> Login functionality</p>
+                                    <p><strong>Why it's important:</strong> Login is critical - if it breaks, users can't access the app</p>
+                                </div>
+
+                                <h4>Step 2: Create Your First Test Case</h4>
+                                <div class="example-box">
+                                    <strong>Test Case ID:</strong> TC_LOGIN_001<br>
+                                    <strong>Test Title:</strong> Verify user can login with valid credentials<br>
+                                    <strong>Pre-conditions:</strong>
+                                    <ul>
+                                        <li>User has valid username and password</li>
+                                        <li>Login page is accessible</li>
+                                    </ul>
+                                    <strong>Test Steps:</strong>
+                                    <ol>
+                                        <li>Open browser and go to login page</li>
+                                        <li>Enter username: "tomsmith"</li>
+                                        <li>Enter password: "SuperSecretPassword!"</li>
+                                        <li>Click "Login" button</li>
+                                    </ol>
+                                    <strong>Expected Result:</strong> User should be redirected to secure area page<br>
+                                    <strong>Actual Result:</strong> (Fill this during testing)<br>
+                                    <strong>Status:</strong> (Pass/Fail/Blocked)
+                                </div>
+
+                                <h4>Step 3: Execute and Document</h4>
+                                <div class="execution-guide">
+                                    <p>📝 <strong>While testing, write down:</strong></p>
+                                    <ul>
+                                        <li>What you clicked/typed</li>
+                                        <li>What happened (screenshots help!)</li>
+                                        <li>Anything unexpected or confusing</li>
+                                        <li>How long each step took</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card beginner-friendly">
+                        <h3>🆘 When You Get Stuck - Help Guide</h3>
+
+                        <div class="help-section">
+                            <h4>🤔 "I don't understand something..."</h4>
+                            <div class="help-steps">
+                                <ol>
+                                    <li><strong>Read it again slowly</strong> - Sometimes it clicks on the second read</li>
+                                    <li><strong>Google the exact error message</strong> - Copy and paste error text</li>
+                                    <li><strong>Ask specific questions</strong> - Instead of "it doesn't work", say "I get error X when I do Y"</li>
+                                    <li><strong>Check our FAQ sections</strong> - Each technology has common problems listed</li>
+                                </ol>
+                            </div>
+
+                            <h4>💡 Learning Tips for Beginners</h4>
+                            <ul class="learning-tips">
+                                <li><strong>Start Small:</strong> Don't try to learn everything at once</li>
+                                <li><strong>Practice Daily:</strong> 30 minutes of practice beats 5 hours once a week</li>
+                                <li><strong>Make Mistakes:</strong> Errors are learning opportunities, not failures</li>
+                                <li><strong>Ask Questions:</strong> No question is too basic or stupid</li>
+                                <li><strong>Keep Notes:</strong> Write down solutions to problems you solve</li>
+                            </ul>
+
+                            <h4>🔍 Debugging Mindset</h4>
+                            <div class="debugging-guide">
+                                <p><strong>When something doesn't work:</strong></p>
+                                <ol>
+                                    <li><strong>Stay Calm:</strong> Every developer faces issues daily</li>
+                                    <li><strong>Read Error Messages:</strong> They usually tell you what's wrong</li>
+                                    <li><strong>Check Your Code:</strong> Look for typos, missing brackets, etc.</li>
+                                    <li><strong>Test One Thing:</strong> Isolate the problem to one specific area</li>
+                                    <li><strong>Google the Error:</strong> Someone else has solved this before</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card beginner-friendly">
+                        <h3>📈 Progress Tracking</h3>
+
+                        <div class="progress-tracker">
+                            <h4>✅ Beginner Milestones (Check these off!)</h4>
+                            <div class="milestone-list">
+                                <label class="milestone">
+                                    <input type="checkbox"> I can write a basic test case
+                                </label>
+                                <label class="milestone">
+                                    <input type="checkbox"> I can find and report a bug clearly
+                                </label>
+                                <label class="milestone">
+                                    <input type="checkbox"> I understand different types of testing
+                                </label>
+                                <label class="milestone">
+                                    <input type="checkbox"> I can set up my development environment
+                                </label>
+                                <label class="milestone">
+                                    <input type="checkbox"> I can write basic Java code
+                                </label>
+                                <label class="milestone">
+                                    <input type="checkbox"> I can create a simple Selenium test
+                                </label>
+                                <label class="milestone">
+                                    <input type="checkbox"> I can test an API endpoint
+                                </label>
+                                <label class="milestone">
+                                    <input type="checkbox"> I can write basic SQL queries
+                                </label>
+                            </div>
+
+                            <div class="confidence-builder">
+                                <h4>🌟 Building Confidence</h4>
+                                <p><strong>Remember:</strong> You don't need to be perfect. Every expert started exactly where you are now.</p>
+                                <ul>
+                                    <li><strong>Celebrate small wins</strong> - Fixing your first bug is a big deal!</li>
+                                    <li><strong>Learn from mistakes</strong> - They make you a better tester</li>
+                                    <li><strong>Compare to your past self</strong> - Not to others</li>
+                                    <li><strong>Ask for help</strong> - It shows you want to learn</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="manual-testing" class="section">
+            <div class="container">
+                <h2>📋 Manual Testing Practices</h2>
+
+                <div class="beginner-intro">
+                    <div class="welcome-card">
+                        <h3>🎯 Manual Testing Made Simple</h3>
+                        <p><strong>What is Manual Testing?</strong> It's testing software by hand - clicking buttons, filling forms, and checking if everything works as expected. Think of it like being a user, but with a detective's mindset!</p>
+
+                        <div class="why-important">
+                            <h4>🤔 Why Manual Testing Matters:</h4>
+                            <ul>
+                                <li>✅ Finds issues automation might miss</li>
+                                <li>✅ Tests user experience and usability</li>
+                                <li>✅ Doesn't require coding skills to start</li>
+                                <li>✅ Helps you understand the application deeply</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card beginner-friendly">
+                        <h3>📝 Writing Your First Test Case</h3>
+
+                        <div class="step-by-step-guide">
+                            <h4>Step 1: Understand the Requirements</h4>
+                            <div class="explanation-box">
+                                <p><strong>Before writing any test:</strong> Read the feature requirements. Ask yourself: "What is this supposed to do?"</p>
+                                <p><strong>Example:</strong> "Users should be able to login with their email and password"</p>
+                            </div>
+
+                            <h4>Step 2: Think Like a User</h4>
+                            <div class="user-scenarios">
+                                <p><strong>Happy Path:</strong> Everything goes right (user enters correct details)</p>
+                                <p><strong>Sad Path:</strong> Things go wrong (user enters wrong password)</p>
+                                <p><strong>Edge Cases:</strong> Unusual situations (user enters emoji in password)</p>
+                            </div>
+
+                            <h4>Step 3: Write the Test Case</h4>
+                            <div class="template-box">
+                                <h5>📋 Test Case Template (Copy This!):</h5>
+                                <div class="example-box">
+                                    <strong>Test Case ID:</strong> TC_[FEATURE]_[NUMBER]<br>
+                                    <strong>Test Title:</strong> [Action] should [Expected Result]<br>
+                                    <strong>Priority:</strong> High/Medium/Low<br>
+                                    <strong>Pre-conditions:</strong> What needs to be ready before testing<br>
+                                    <strong>Test Data:</strong> What data you'll use<br>
+                                    <strong>Test Steps:</strong><br>
+                                    1. [Detailed action]<br>
+                                    2. [Detailed action]<br>
+                                    3. [Detailed action]<br>
+                                    <strong>Expected Result:</strong> What should happen<br>
+                                    <strong>Actual Result:</strong> [Fill during execution]<br>
+                                    <strong>Status:</strong> [Pass/Fail/Blocked]<br>
+                                    <strong>Comments:</strong> [Any notes or observations]
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="real-example">
+                            <h4>🌟 Complete Example - Login Test</h4>
+                            <div class="example-box">
+                                <strong>Test Case ID:</strong> TC_LOGIN_001<br>
+                                <strong>Test Title:</strong> User login with valid credentials should redirect to dashboard<br>
+                                <strong>Priority:</strong> High<br>
+                                <strong>Pre-conditions:</strong>
+                                <ul>
+                                    <li>Application is running and accessible</li>
+                                    <li>User account exists in system</li>
+                                    <li>User is not already logged in</li>
+                                </ul>
+                                <strong>Test Data:</strong>
+                                <ul>
+                                    <li>Username: testuser@example.com</li>
+                                    <li>Password: SecurePass123!</li>
+                                </ul>
+                                <strong>Test Steps:</strong><br>
+                                1. Open web browser (Chrome/Firefox)<br>
+                                2. Navigate to login page (www.example.com/login)<br>
+                                3. Verify login form is displayed<br>
+                                4. Enter username in email field<br>
+                                5. Enter password in password field<br>
+                                6. Click "Login" button<br>
+                                7. Wait for page to load<br>
+                                <strong>Expected Result:</strong>
+                                <ul>
+                                    <li>User should be redirected to dashboard page</li>
+                                    <li>URL should change to /dashboard</li>
+                                    <li>User's name should appear in top-right corner</li>
+                                    <li>No error messages should be displayed</li>
+                                </ul>
+                                <strong>Actual Result:</strong> [To be filled during execution]<br>
+                                <strong>Status:</strong> [To be filled during execution]
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card beginner-friendly">
+                        <h3>🔍 Testing Techniques for Beginners</h3>
+
+                        <div class="technique-section">
+                            <h4>1. Boundary Value Analysis (Simple Version)</h4>
+                            <div class="explanation-box">
+                                <p><strong>What it means:</strong> Test the edges of what's allowed</p>
+                                <p><strong>Example:</strong> If age field accepts 18-65, test: 17 (too low), 18 (minimum), 65 (maximum), 66 (too high)</p>
+                            </div>
+
+                            <div class="practice-example">
+                                <h5>🎯 Try This:</h5>
+                                <p><strong>Field:</strong> Password must be 8-20 characters</p>
+                                <p><strong>Test Values:</strong></p>
+                                <ul>
+                                    <li>7 characters: "pass123" (should fail)</li>
+                                    <li>8 characters: "pass1234" (should pass)</li>
+                                    <li>20 characters: "pass123456789012345" (should pass)</li>
+                                    <li>21 characters: "pass1234567890123456" (should fail)</li>
+                                </ul>
+                            </div>
+
+                            <h4>2. Equivalence Partitioning (Simple Version)</h4>
+                            <div class="explanation-box">
+                                <p><strong>What it means:</strong> Group similar inputs together and test one from each group</p>
+                                <p><strong>Example:</strong> For age groups, test one teenager (16), one adult (25), one senior (70)</p>
+                            </div>
+
+                            <h4>3. Error Guessing (Detective Work)</h4>
+                            <div class="common-errors">
+                                <p><strong>Always test these:</strong></p>
+                                <ul>
+                                    <li>🔍 <strong>Empty fields:</strong> What happens if you leave it blank?</li>
+                                    <li>🔍 <strong>Wrong data type:</strong> Put letters where numbers are expected</li>
+                                    <li>🔍 <strong>Special characters:</strong> Try @#$%^&* in text fields</li>
+                                    <li>🔍 <strong>Very long text:</strong> Copy-paste a paragraph into a name field</li>
+                                    <li>🔍 <strong>Spaces:</strong> Start or end with spaces</li>
+                                    <li>🔍 <strong>Case sensitivity:</strong> Try UPPERCASE, lowercase, MiXeD</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card beginner-friendly">
+                        <h3>📋 Step-by-Step Testing Workflow</h3>
+
+                        <div class="workflow-guide">
+                            <h4>🚀 Before You Start Testing</h4>
+                            <div class="checklist">
+                                <label class="checklist-item">
+                                    <input type="checkbox"> Read and understand requirements
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox"> Set up test environment
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox"> Prepare test data
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox"> Clear browser cache
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox"> Have bug tracking tool ready
+                                </label>
+                            </div>
+
+                            <h4>🎯 During Testing</h4>
+                            <div class="testing-steps">
+                                <div class="step">
+                                    <h5>Step 1: Execute Test Cases</h5>
+                                    <ul>
+                                        <li>Follow test steps exactly as written</li>
+                                        <li>Take screenshots of important steps</li>
+                                        <li>Note actual results as you go</li>
+                                        <li>Don't skip steps (even if they seem obvious)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="step">
+                                    <h5>Step 2: Compare Results</h5>
+                                    <ul>
+                                        <li>Does actual result match expected result?</li>
+                                        <li>If yes → Mark as PASS</li>
+                                        <li>If no → Mark as FAIL and document the issue</li>
+                                        <li>If you can't complete → Mark as BLOCKED</li>
+                                    </ul>
+                                </div>
+
+                                <div class="step">
+                                    <h5>Step 3: Explore Beyond the Script</h5>
+                                    <ul>
+                                        <li>Try related functionality</li>
+                                        <li>Look for visual issues</li>
+                                        <li>Check loading times</li>
+                                        <li>Test on different screen sizes</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h4>📝 After Testing</h4>
+                            <div class="checklist">
+                                <label class="checklist-item">
+                                    <input type="checkbox"> Update test case status
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox"> Report any bugs found
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox"> Clean up test data
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox"> Document lessons learned
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card beginner-friendly">
+                        <h3>🐛 Bug Reporting for Beginners</h3>
+
+                        <div class="bug-guide">
+                            <h4>❓ What Makes a Good Bug Report?</h4>
+                            <div class="good-bug-criteria">
+                                <ul>
+                                    <li>✅ <strong>Clear title:</strong> Describes the problem in one sentence</li>
+                                    <li>✅ <strong>Steps to reproduce:</strong> Anyone can follow and see the same issue</li>
+                                    <li>✅ <strong>Expected vs Actual:</strong> What should happen vs what really happened</li>
+                                    <li>✅ <strong>Environment details:</strong> Browser, OS, device used</li>
+                                    <li>✅ <strong>Screenshots/videos:</strong> Visual proof of the issue</li>
+                                </ul>
+                            </div>
+
+                            <h4>📋 Bug Report Template</h4>
+                            <div class="bug-template">
+                                <div class="example-box">
+                                    <strong>Bug ID:</strong> BUG_[DATE]_[NUMBER]<br>
+                                    <strong>Title:</strong> [Clear, specific description]<br>
+                                    <strong>Severity:</strong> Critical/High/Medium/Low<br>
+                                    <strong>Priority:</strong> P1/P2/P3/P4<br>
+                                    <strong>Environment:</strong>
+                                    <ul>
+                                        <li>OS: Windows 10 / macOS / Ubuntu</li>
+                                        <li>Browser: Chrome 118.0</li>
+                                        <li>Device: Desktop / Mobile</li>
+                                        <li>Screen Resolution: 1920x1080</li>
+                                    </ul>
+                                    <strong>Steps to Reproduce:</strong>
+                                    <ol>
+                                        <li>[Detailed step]</li>
+                                        <li>[Detailed step]</li>
+                                        <li>[Detailed step]</li>
+                                    </ol>
+                                    <strong>Expected Result:</strong> [What should happen]<br>
+                                    <strong>Actual Result:</strong> [What actually happened]<br>
+                                    <strong>Attachments:</strong> [Screenshots, videos, logs]<br>
+                                    <strong>Additional Notes:</strong> [Any other relevant information]
+                                </div>
+                            </div>
+
+                            <h4>🌟 Real Bug Report Example</h4>
+                            <div class="example-box good-example">
+                                <strong>Bug ID:</strong> BUG_20241201_001<br>
+                                <strong>Title:</strong> Login button becomes unclickable after entering wrong password 3 times<br>
+                                <strong>Severity:</strong> High<br>
+                                <strong>Priority:</strong> P2<br>
+                                <strong>Environment:</strong>
+                                <ul>
+                                    <li>OS: Windows 10</li>
+                                    <li>Browser: Chrome 118.0.5993.70</li>
+                                    <li>Device: Desktop</li>
+                                    <li>URL: staging.example.com/login</li>
+                                </ul>
+                                <strong>Steps to Reproduce:</strong>
+                                <ol>
+                                    <li>Navigate to login page</li>
+                                    <li>Enter valid email: test@example.com</li>
+                                    <li>Enter wrong password: wrongpass123</li>
+                                    <li>Click Login button</li>
+                                    <li>Repeat steps 2-4 three times</li>
+                                    <li>Try to click Login button again</li>
+                                </ol>
+                                <strong>Expected Result:</strong> Login button should remain clickable, or show clear error message about account lockout<br>
+                                <strong>Actual Result:</strong> Login button becomes grayed out and unclickable. No error message explains why.<br>
+                                <strong>Attachments:</strong> screenshot_login_disabled.png<br>
+                                <strong>Additional Notes:</strong> Issue persists even after refreshing page. Only clearing cookies resolves it.
+                            </div>
+                        </div>
+
+                        <div class="severity-guide-detailed">
+                            <h4>🚨 How to Choose Bug Severity</h4>
+                            <div class="severity-examples">
+                                <div class="severity-item critical">
+                                    <strong>🔴 Critical:</strong> App crashes, data loss, security breach
+                                    <p><em>Example:</em> "App crashes when user clicks submit button"</p>
+                                </div>
+                                <div class="severity-item high">
+                                    <strong>🟠 High:</strong> Major feature completely broken
+                                    <p><em>Example:</em> "Users cannot login at all"</p>
+                                </div>
+                                <div class="severity-item medium">
+                                    <strong>🟡 Medium:</strong> Feature works but has issues
+                                    <p><em>Example:</em> "Search results are sometimes incorrect"</p>
+                                </div>
+                                <div class="severity-item low">
+                                    <strong>🟢 Low:</strong> Cosmetic issues, typos
+                                    <p><em>Example:</em> "Button text has spelling error"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card beginner-friendly">
+                        <h3>❌ Common Beginner Mistakes & How to Avoid Them</h3>
+
+                        <div class="mistakes-section">
+                            <div class="mistake-item">
+                                <h4>❌ Mistake 1: Vague Bug Reports</h4>
+                                <div class="bad-example">
+                                    <p><strong>Bad:</strong> "Login doesn't work"</p>
+                                </div>
+                                <div class="good-example">
+                                    <p><strong>Good:</strong> "Error message 'Invalid credentials' appears when entering correct username and password on login page"</p>
+                                </div>
+                                <div class="solution">
+                                    <p><strong>💡 Fix:</strong> Always include specific details about what you did and what happened</p>
+                                </div>
+                            </div>
+
+                            <div class="mistake-item">
+                                <h4>❌ Mistake 2: Not Following Test Steps Exactly</h4>
+                                <div class="bad-example">
+                                    <p><strong>Bad:</strong> Skipping steps because "they seem obvious"</p>
+                                </div>
+                                <div class="good-example">
+                                    <p><strong>Good:</strong> Following every step exactly as written</p>
+                                </div>
+                                <div class="solution">
+                                    <p><strong>💡 Fix:</strong> Test cases are written for a reason. Each step might reveal different issues</p>
+                                </div>
+                            </div>
+
+                            <div class="mistake-item">
+                                <h4>❌ Mistake 3: Only Testing Happy Path</h4>
+                                <div class="bad-example">
+                                    <p><strong>Bad:</strong> Only testing when everything goes right</p>
+                                </div>
+                                <div class="good-example">
+                                    <p><strong>Good:</strong> Testing both success and failure scenarios</p>
+                                </div>
+                                <div class="solution">
+                                    <p><strong>💡 Fix:</strong> Always ask "What if something goes wrong?" and test those scenarios</p>
+                                </div>
+                            </div>
+
+                            <div class="mistake-item">
+                                <h4>❌ Mistake 4: Not Taking Screenshots</h4>
+                                <div class="bad-example">
+                                    <p><strong>Bad:</strong> Describing visual issues with words only</p>
+                                </div>
+                                <div class="good-example">
+                                    <p><strong>Good:</strong> Including screenshots of every bug found</p>
+                                </div>
+                                <div class="solution">
+                                    <p><strong>💡 Fix:</strong> A picture is worth a thousand words. Always include visual proof</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card beginner-friendly">
+                        <h3>❓ Manual Testing FAQ</h3>
+
+                        <div class="faq-section">
+                            <details class="faq-item">
+                                <summary>❓ How do I know if I found a real bug or if it's expected behavior?</summary>
+                                <div class="faq-answer">
+                                    <p><strong>Answer:</strong> Check the requirements first. If behavior doesn't match requirements, it's likely a bug. When in doubt, ask your team lead or product owner.</p>
+                                    <p><strong>Tip:</strong> It's better to report something that might be a bug than to miss a real issue.</p>
+                                </div>
+                            </details>
+
+                            <details class="faq-item">
+                                <summary>❓ How detailed should my test steps be?</summary>
+                                <div class="faq-answer">
+                                    <p><strong>Answer:</strong> Detailed enough that someone who has never seen the application could follow them and get the same result.</p>
+                                    <p><strong>Example:</strong> Instead of "login", write "Enter 'testuser@example.com' in the email field, enter 'password123' in the password field, click the blue 'Login' button"</p>
+                                </div>
+                            </details>
+
+                            <details class="faq-item">
+                                <summary>❓ What if I can't reproduce a bug I found earlier?</summary>
+                                <div class="faq-answer">
+                                    <p><strong>Answer:</strong> This happens! Try these steps:</p>
+                                    <ol>
+                                        <li>Try the exact same steps again</li>
+                                        <li>Check if anything changed (different browser, data, etc.)</li>
+                                        <li>Try on a different device/browser</li>
+                                        <li>Document that it's intermittent and when you saw it</li>
+                                    </ol>
+                                </div>
+                            </details>
+
+                            <details class="faq-item">
+                                <summary>❓ How do I prioritize which bugs to report first?</summary>
+                                <div class="faq-answer">
+                                    <p><strong>Answer:</strong> Report in this order:</p>
+                                    <ol>
+                                        <li><strong>Critical:</strong> Crashes, data loss, security issues</li>
+                                        <li><strong>High:</strong> Core features completely broken</li>
+                                        <li><strong>Medium:</strong> Features work but have problems</li>
+                                        <li><strong>Low:</strong> Cosmetic issues, typos</li>
+                                    </ol>
+                                </div>
+                            </details>
+
+                            <details class="faq-item">
+                                <summary>❓ Should I test on multiple browsers?</summary>
+                                <div class="faq-answer">
+                                    <p><strong>Answer:</strong> Yes! Different browsers can show different issues. Start with Chrome, then test Firefox and Safari. Check requirements for which browsers your app should support.</p>
+                                </div>
+                            </details>
+
+                            <details class="faq-item">
+                                <summary>❓ What if I'm not sure how something should work?</summary>
+                                <div class="faq-answer">
+                                    <p><strong>Answer:</strong> Don't guess! Ask your team:</p>
+                                    <ul>
+                                        <li>Check requirements documentation</li>
+                                        <li>Ask the product owner or business analyst</li>
+                                        <li>Look at similar features in the app</li>
+                                        <li>Check how competitors handle it</li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Testing Techniques</h3>
+                        <h4>Boundary Value Analysis:</h4>
+                        <ul>
+                            <li>Test minimum values (0, 1)</li>
+                            <li>Test maximum values (99, 100)</li>
+                            <li>Test just outside boundaries (-1, 101)</li>
+                        </ul>
+
+                        <h4>Equivalence Partitioning:</h4>
+                        <ul>
+                            <li>Valid input class</li>
+                            <li>Invalid input class</li>
+                            <li>Test one value from each partition</li>
+                        </ul>
+
+                        <h4>Error Guessing:</h4>
+                        <ul>
+                            <li>Empty fields</li>
+                            <li>Special characters</li>
+                            <li>SQL injection attempts</li>
+                            <li>Cross-site scripting (XSS)</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Bug Reporting Best Practices</h3>
+                        <h4>Essential Bug Report Elements:</h4>
+                        <ul>
+                            <li><strong>Summary:</strong> Clear, concise title</li>
+                            <li><strong>Environment:</strong> OS, browser, version</li>
+                            <li><strong>Steps to Reproduce:</strong> Detailed steps</li>
+                            <li><strong>Expected vs Actual:</strong> What should vs what did happen</li>
+                            <li><strong>Severity:</strong> Critical/High/Medium/Low</li>
+                            <li><strong>Priority:</strong> P1/P2/P3/P4</li>
+                            <li><strong>Screenshots/Videos:</strong> Visual evidence</li>
+                        </ul>
+
+                        <div class="severity-guide">
+                            <h4>Severity Guidelines:</h4>
+                            <p><strong>Critical:</strong> System crash, data loss</p>
+                            <p><strong>High:</strong> Major functionality broken</p>
+                            <p><strong>Medium:</strong> Minor functionality issues</p>
+                            <p><strong>Low:</strong> Cosmetic issues, typos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="java-fundamentals" class="section">
+            <div class="container">
+                <h2>☕ Java Fundamentals for QA</h2>
+
+                <div class="beginner-intro">
+                    <div class="welcome-card">
+                        <h3>☕ Why Java for QA Testing?</h3>
+                        <p><strong>Don't worry if you've never coded before!</strong> Java is a great first programming language for testers. It's widely used in automation testing and has excellent documentation and community support.</p>
+
+                        <div class="why-important">
+                            <h4>🎯 Why Learn Java as a QA?</h4>
+                            <ul>
+                                <li>✅ Most popular language for test automation</li>
+                                <li>✅ Great for Selenium, REST Assured, and Appium</li>
+                                <li>✅ Lots of jobs require Java testing skills</li>
+                                <li>✅ Strong typing helps prevent bugs</li>
+                                <li>✅ Huge community and learning resources</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Basic Syntax & Data Types</h3>
+                        <pre><code class="language-java">// Variable declarations
+String testName = "LoginTest";
+int testCount = 5;
+boolean isPassed = true;
+double responseTime = 2.5;
+
+// Arrays
+String[] browsers = {"Chrome", "Firefox", "Safari"};
+int[] testResults = {1, 0, 1, 1, 0}; // 1=pass, 0=fail
+
+// Constants
+public static final String BASE_URL = "https://example.com";
+public static final int TIMEOUT = 30;</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Control Structures</h3>
+                        <pre><code class="language-java">// If-else for test validation
+if (actualResult.equals(expectedResult)) {
+    System.out.println("Test Passed");
+} else {
+    System.out.println("Test Failed: Expected " + expectedResult +
+                      " but got " + actualResult);
+}
+
+// For loop for data-driven testing
+String[] testData = {"user1", "user2", "user3"};
+for (String user : testData) {
+    loginTest(user);
+}
+
+// While loop for polling
+int attempts = 0;
+while (!elementIsPresent() && attempts < 10) {
+    Thread.sleep(1000);
+    attempts++;
+}</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Exception Handling</h3>
+                        <pre><code class="language-java">// Try-catch for robust test automation
+try {
+    WebElement element = driver.findElement(By.id("submit"));
+    element.click();
+    System.out.println("Element clicked successfully");
+} catch (NoSuchElementException e) {
+    System.out.println("Element not found: " + e.getMessage());
+    // Take screenshot for debugging
+    takeScreenshot("element_not_found");
+} catch (TimeoutException e) {
+    System.out.println("Timeout waiting for element: " + e.getMessage());
+} finally {
+    // Cleanup code that always runs
+    driver.quit();
+}</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Classes & Objects for Test Framework</h3>
+                        <pre><code class="language-java">// Test Data class
+public class TestUser {
+    private String username;
+    private String password;
+    private String email;
+
+    public TestUser(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
+
+    // Getters
+    public String getUsername() { return username; }
+    public String getPassword() { return password; }
+    public String getEmail() { return email; }
+}
+
+// Test Helper class
+public class TestHelper {
+    public static String generateRandomEmail() {
+        return "test" + System.currentTimeMillis() + "@example.com";
+    }
+
+    public static void waitForElement(WebDriver driver, By locator, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="selenium" class="section">
+            <div class="container">
+                <h2>🌐 Selenium WebDriver</h2>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Setup & Driver Initialization</h3>
+                        <pre><code class="language-java">// Maven dependencies in pom.xml
+/*
+&lt;dependency&gt;
+    &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+    &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
+    &lt;version&gt;4.15.0&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;io.github.bonigarcia&lt;/groupId&gt;
+    &lt;artifactId&gt;webdrivermanager&lt;/artifactId&gt;
+    &lt;version&gt;5.6.2&lt;/version&gt;
+&lt;/dependency&gt;
+*/
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DriverFactory {
+    public static WebDriver createDriver(String browser) {
+        WebDriver driver;
+
+        switch (browser.toLowerCase()) {
+            case "chrome":
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless"); // For CI/CD
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                driver = new ChromeDriver(options);
+                break;
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+                break;
+            default:
+                throw new IllegalArgumentException("Browser not supported: " + browser);
+        }
+
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        return driver;
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Element Locators</h3>
+                        <pre><code class="language-java">// Different locator strategies
+By id = By.id("loginButton");
+By name = By.name("username");
+By className = By.className("error-message");
+By tagName = By.tagName("input");
+By linkText = By.linkText("Forgot Password?");
+By partialLinkText = By.partialLinkText("Forgot");
+
+// CSS Selectors (Recommended)
+By cssSelector = By.cssSelector("#loginForm input[type='password']");
+By cssClass = By.cssSelector(".btn-primary");
+By cssAttribute = By.cssSelector("input[placeholder='Enter username']");
+
+// XPath (When CSS is not sufficient)
+By xpath = By.xpath("//button[contains(text(), 'Submit')]");
+By xpathFollowing = By.xpath("//label[text()='Password']/following::input[1]");
+By xpathParent = By.xpath("//input[@id='username']/..//span[@class='error']");
+
+// Best Practice: Use Page Object Model
+public class LoginPage {
+    private static final By USERNAME_FIELD = By.id("username");
+    private static final By PASSWORD_FIELD = By.id("password");
+    private static final By LOGIN_BUTTON = By.cssSelector("button[type='submit']");
+    private static final By ERROR_MESSAGE = By.cssSelector(".alert-danger");
+}</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Common Actions & Waits</h3>
+                        <pre><code class="language-java">// Element interactions
+WebElement usernameField = driver.findElement(By.id("username"));
+usernameField.clear();
+usernameField.sendKeys("testuser");
+
+WebElement dropdown = driver.findElement(By.id("country"));
+Select select = new Select(dropdown);
+select.selectByVisibleText("United States");
+select.selectByValue("US");
+select.selectByIndex(0);
+
+// JavaScript execution
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+js.executeScript("arguments[0].click();", element);
+
+// Explicit waits (Recommended)
+WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("submit")));
+wait.until(ExpectedConditions.textToBePresentInElement(statusElement, "Success"));
+wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("loading")));
+
+// Custom wait conditions
+wait.until(driver -> driver.findElement(By.id("result")).getText().length() > 0);
+
+// Handling alerts
+Alert alert = driver.switchTo().alert();
+String alertText = alert.getText();
+alert.accept(); // or alert.dismiss();</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Page Object Model Example</h3>
+                        <pre><code class="language-java">// BasePage.java
+public class BasePage {
+    protected WebDriver driver;
+    protected WebDriverWait wait;
+
+    public BasePage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        PageFactory.initElements(driver, this);
+    }
+
+    protected void waitAndClick(By locator) {
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        element.click();
+    }
+
+    protected void waitAndSendKeys(By locator, String text) {
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        element.clear();
+        element.sendKeys(text);
+    }
+}
+
+// LoginPage.java
+public class LoginPage extends BasePage {
+    private static final By USERNAME_FIELD = By.id("username");
+    private static final By PASSWORD_FIELD = By.id("password");
+    private static final By LOGIN_BUTTON = By.cssSelector("button[type='submit']");
+    private static final By ERROR_MESSAGE = By.cssSelector(".alert-danger");
+
+    public LoginPage(WebDriver driver) {
+        super(driver);
+    }
+
+    public LoginPage enterUsername(String username) {
+        waitAndSendKeys(USERNAME_FIELD, username);
+        return this;
+    }
+
+    public LoginPage enterPassword(String password) {
+        waitAndSendKeys(PASSWORD_FIELD, password);
+        return this;
+    }
+
+    public DashboardPage clickLogin() {
+        waitAndClick(LOGIN_BUTTON);
+        return new DashboardPage(driver);
+    }
+
+    public String getErrorMessage() {
+        return wait.until(ExpectedConditions.presenceOfElementLocated(ERROR_MESSAGE)).getText();
+    }
+
+    // Fluent interface for chaining
+    public DashboardPage login(String username, String password) {
+        return enterUsername(username)
+                .enterPassword(password)
+                .clickLogin();
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rest-assured" class="section">
+            <div class="container">
+                <h2>🔌 REST Assured API Testing</h2>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Setup & Basic Structure</h3>
+                        <pre><code class="language-java">// Maven dependency
+/*
+&lt;dependency&gt;
+    &lt;groupId&gt;io.rest-assured&lt;/groupId&gt;
+    &lt;artifactId&gt;rest-assured&lt;/artifactId&gt;
+    &lt;version&gt;5.3.2&lt;/version&gt;
+&lt;/dependency&gt;
+*/
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+// Base configuration
+public class APITestBase {
+    @BeforeClass
+    public static void setup() {
+        baseURI = "https://jsonplaceholder.typicode.com";
+        port = 443;
+        basePath = "/api/v1";
+
+        // Enable request/response logging
+        enableLoggingOfRequestAndResponseIfValidationFails();
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>GET Requests & Validation</h3>
+                        <pre><code class="language-java">// Simple GET request
+@Test
+public void testGetUser() {
+    given()
+        .when()
+            .get("/users/1")
+        .then()
+            .statusCode(200)
+            .body("name", equalTo("Leanne Graham"))
+            .body("email", containsString("@"))
+            .body("address.city", equalTo("Gwenborough"));
+}
+
+// GET with query parameters
+@Test
+public void testGetUsersWithParams() {
+    given()
+        .queryParam("page", 1)
+        .queryParam("limit", 10)
+        .when()
+            .get("/users")
+        .then()
+            .statusCode(200)
+            .body("size()", lessThanOrEqualTo(10))
+            .body("[0].id", notNullValue());
+}
+
+// Extract response data
+@Test
+public void testExtractResponseData() {
+    Response response =
+        given()
+            .when()
+                .get("/users/1")
+            .then()
+                .statusCode(200)
+                .extract().response();
+
+    String userName = response.path("name");
+    int userId = response.path("id");
+    String email = response.jsonPath().getString("email");
+
+    System.out.println("User: " + userName + " (ID: " + userId + ")");
+}</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>POST, PUT, DELETE Requests</h3>
+                        <pre><code class="language-java">// POST request with JSON body
+@Test
+public void testCreateUser() {
+    String requestBody = "{"
+        + "\"name\": \"John Doe\","
+        + "\"email\": \"john@example.com\","
+        + "\"username\": \"johndoe\""
+        + "}";
+
+    given()
+        .header("Content-Type", "application/json")
+        .body(requestBody)
+        .when()
+            .post("/users")
+        .then()
+            .statusCode(201)
+            .body("name", equalTo("John Doe"))
+            .body("id", notNullValue());
+}
+
+// PUT request to update user
+@Test
+public void testUpdateUser() {
+    Map<String, Object> userUpdate = new HashMap<>();
+    userUpdate.put("name", "Jane Doe Updated");
+    userUpdate.put("email", "jane.updated@example.com");
+
+    given()
+        .contentType("application/json")
+        .body(userUpdate)
+        .when()
+            .put("/users/1")
+        .then()
+            .statusCode(200)
+            .body("name", equalTo("Jane Doe Updated"));
+}
+
+// DELETE request
+@Test
+public void testDeleteUser() {
+    given()
+        .when()
+            .delete("/users/1")
+        .then()
+            .statusCode(200);
+
+    // Verify user is deleted
+    given()
+        .when()
+            .get("/users/1")
+        .then()
+            .statusCode(404);
+}</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Authentication & Headers</h3>
+                        <pre><code class="language-java">// Basic Authentication
+@Test
+public void testBasicAuth() {
+    given()
+        .auth().basic("username", "password")
+        .when()
+            .get("/secure/users")
+        .then()
+            .statusCode(200);
+}
+
+// Bearer Token Authentication
+@Test
+public void testBearerToken() {
+    String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...";
+
+    given()
+        .header("Authorization", "Bearer " + token)
+        .when()
+            .get("/protected/data")
+        .then()
+            .statusCode(200);
+}
+
+// Custom headers
+@Test
+public void testCustomHeaders() {
+    given()
+        .header("X-API-Key", "your-api-key")
+        .header("Accept", "application/json")
+        .header("User-Agent", "MyTestApp/1.0")
+        .when()
+            .get("/api/data")
+        .then()
+            .statusCode(200)
+            .header("Content-Type", containsString("application/json"));
+}
+
+// Request specification for reusability
+public class APISpecs {
+    public static RequestSpecification getBaseSpec() {
+        return new RequestSpecBuilder()
+            .setBaseUri("https://api.example.com")
+            .setContentType("application/json")
+            .addHeader("X-API-Key", "your-api-key")
+            .build();
+    }
+}
+
+@Test
+public void testWithSpec() {
+    given()
+        .spec(APISpecs.getBaseSpec())
+        .when()
+            .get("/users")
+        .then()
+            .statusCode(200);
+}</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>JSON Schema Validation</h3>
+                        <pre><code class="language-java">// Add dependency for JSON schema validation
+/*
+&lt;dependency&gt;
+    &lt;groupId&gt;io.rest-assured&lt;/groupId&gt;
+    &lt;artifactId&gt;json-schema-validator&lt;/artifactId&gt;
+    &lt;version&gt;5.3.2&lt;/version&gt;
+&lt;/dependency&gt;
+*/
+
+import static io.restassured.module.jsv.JsonSchemaValidator.*;
+
+// JSON Schema validation
+@Test
+public void testJSONSchema() {
+    given()
+        .when()
+            .get("/users/1")
+        .then()
+            .statusCode(200)
+            .body(matchesJsonSchemaInClasspath("user-schema.json"));
+}
+
+// user-schema.json file content:
+/*
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": { "type": "number" },
+    "name": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "address": {
+      "type": "object",
+      "properties": {
+        "street": { "type": "string" },
+        "city": { "type": "string" },
+        "zipcode": { "type": "string" }
+      },
+      "required": ["street", "city", "zipcode"]
+    }
+  },
+  "required": ["id", "name", "email"]
+}
+*/</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="appium" class="section">
+            <div class="container">
+                <h2>📱 Appium Mobile Testing</h2>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Setup & Capabilities</h3>
+                        <pre><code class="language-java">// Maven dependencies
+/*
+&lt;dependency&gt;
+    &lt;groupId&gt;io.appium&lt;/groupId&gt;
+    &lt;artifactId&gt;java-client&lt;/artifactId&gt;
+    &lt;version&gt;8.6.0&lt;/version&gt;
+&lt;/dependency&gt;
+*/
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class MobileDriverFactory {
+
+    public static AndroidDriver createAndroidDriver() {
+        DesiredCapabilities caps = new DesiredCapabilities();
+
+        // Platform capabilities
+        caps.setCapability("platformName", "Android");
+        caps.setCapability("platformVersion", "12.0");
+        caps.setCapability("deviceName", "Pixel_5_API_31");
+
+        // App capabilities
+        caps.setCapability("appPackage", "com.example.myapp");
+        caps.setCapability("appActivity", ".MainActivity");
+        caps.setCapability("app", "/path/to/app.apk");
+
+        // Additional capabilities
+        caps.setCapability("automationName", "UiAutomator2");
+        caps.setCapability("newCommandTimeout", 300);
+        caps.setCapability("noReset", false);
+
+        return new AndroidDriver(
+            new URL("http://localhost:4723/wd/hub"), caps);
+    }
+
+    public static IOSDriver createIOSDriver() {
+        DesiredCapabilities caps = new DesiredCapabilities();
+
+        caps.setCapability("platformName", "iOS");
+        caps.setCapability("platformVersion", "15.5");
+        caps.setCapability("deviceName", "iPhone 13");
+        caps.setCapability("bundleId", "com.example.myapp");
+        caps.setCapability("automationName", "XCUITest");
+
+        return new IOSDriver(
+            new URL("http://localhost:4723/wd/hub"), caps);
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Mobile Locators & Actions</h3>
+                        <pre><code class="language-java">// Mobile-specific locators
+import io.appium.java_client.AppiumBy;
+
+// Android locators
+By androidId = AppiumBy.id("com.example:id/login_button");
+By androidAccessibility = AppiumBy.accessibilityId("Login Button");
+By androidXPath = AppiumBy.xpath("//android.widget.Button[@text='Login']");
+By androidUiAutomator = AppiumBy.androidUIAutomator(
+    "new UiSelector().text(\"Login\").className(\"android.widget.Button\")");
+
+// iOS locators
+By iosAccessibility = AppiumBy.accessibilityId("loginButton");
+By iosClassChain = AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`name == 'Login'`]");
+By iosNSPredicate = AppiumBy.iOSNsPredicateString("name == 'Login' AND type == 'XCUIElementTypeButton'");
+
+// Touch actions
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
+import io.appium.java_client.touch.WaitOptions;
+
+public class MobileActions {
+
+    public void performTap(AppiumDriver driver, WebElement element) {
+        TouchAction action = new TouchAction(driver);
+        action.tap(PointOption.point(element.getLocation())).perform();
+    }
+
+    public void performSwipe(AppiumDriver driver, int startX, int startY, int endX, int endY) {
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(startX, startY))
+              .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000)))
+              .moveTo(PointOption.point(endX, endY))
+              .release()
+              .perform();
+    }
+
+    public void scrollToElement(AppiumDriver driver, String text) {
+        driver.findElement(AppiumBy.androidUIAutomator(
+            "new UiScrollable(new UiSelector().scrollable(true))" +
+            ".scrollIntoView(new UiSelector().text(\"" + text + "\"))"));
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Mobile Test Patterns</h3>
+                        <pre><code class="language-java">// Base Mobile Test Class
+public class BaseMobileTest {
+    protected AppiumDriver driver;
+
+    @BeforeMethod
+    public void setUp() {
+        driver = MobileDriverFactory.createAndroidDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+
+    protected void waitForElement(By locator, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
+    protected void hideKeyboard() {
+        try {
+            ((AndroidDriver) driver).hideKeyboard();
+        } catch (Exception e) {
+            // Keyboard not present
+        }
+    }
+}
+
+// Page Object for Mobile
+public class LoginScreen extends BaseMobileTest {
+    private static final By USERNAME_FIELD = AppiumBy.id("com.example:id/username");
+    private static final By PASSWORD_FIELD = AppiumBy.id("com.example:id/password");
+    private static final By LOGIN_BUTTON = AppiumBy.accessibilityId("Login Button");
+
+    public LoginScreen enterUsername(String username) {
+        waitForElement(USERNAME_FIELD, 10);
+        driver.findElement(USERNAME_FIELD).sendKeys(username);
+        return this;
+    }
+
+    public LoginScreen enterPassword(String password) {
+        driver.findElement(PASSWORD_FIELD).sendKeys(password);
+        hideKeyboard();
+        return this;
+    }
+
+    public HomeScreen clickLogin() {
+        driver.findElement(LOGIN_BUTTON).click();
+        return new HomeScreen();
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Advanced Mobile Testing</h3>
+                        <pre><code class="language-java">// Device-specific operations
+public class DeviceOperations {
+
+    public void toggleWiFi(AndroidDriver driver) {
+        driver.toggleWifi();
+    }
+
+    public void setNetworkConnection(AndroidDriver driver, boolean wifi, boolean data) {
+        ConnectionState state = new ConnectionState(wifi, data, false);
+        driver.setConnection(state);
+    }
+
+    public void rotateDevice(AppiumDriver driver) {
+        ScreenOrientation current = driver.getOrientation();
+        if (current == ScreenOrientation.PORTRAIT) {
+            driver.rotate(ScreenOrientation.LANDSCAPE);
+        } else {
+            driver.rotate(ScreenOrientation.PORTRAIT);
+        }
+    }
+
+    public void installApp(AndroidDriver driver, String appPath) {
+        driver.installApp(appPath);
+    }
+
+    public void launchApp(AppiumDriver driver) {
+        driver.launchApp();
+    }
+
+    public void closeApp(AppiumDriver driver) {
+        driver.closeApp();
+    }
+}
+
+// Cross-platform test
+@Test
+public void testLoginOnBothPlatforms() {
+    // Test on Android
+    AndroidDriver androidDriver = MobileDriverFactory.createAndroidDriver();
+    performLoginTest(androidDriver);
+    androidDriver.quit();
+
+    // Test on iOS
+    IOSDriver iosDriver = MobileDriverFactory.createIOSDriver();
+    performLoginTest(iosDriver);
+    iosDriver.quit();
+}
+
+private void performLoginTest(AppiumDriver driver) {
+    // Common test logic for both platforms
+    WebElement usernameField = driver.findElement(
+        AppiumBy.accessibilityId("usernameField"));
+    WebElement passwordField = driver.findElement(
+        AppiumBy.accessibilityId("passwordField"));
+    WebElement loginButton = driver.findElement(
+        AppiumBy.accessibilityId("loginButton"));
+
+    usernameField.sendKeys("testuser");
+    passwordField.sendKeys("testpass");
+    loginButton.click();
+
+    // Verify login success
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    wait.until(ExpectedConditions.presenceOfElementLocated(
+        AppiumBy.accessibilityId("welcomeMessage")));
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sql" class="section">
+            <div class="container">
+                <h2>🗃️ SQL for QA Engineers</h2>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Essential SELECT Queries</h3>
+                        <pre><code class="language-sql">-- Basic SELECT operations
+SELECT * FROM users WHERE status = 'active';
+SELECT username, email, created_date FROM users;
+SELECT COUNT(*) FROM orders WHERE order_date >= '2024-01-01';
+
+-- Filtering and sorting
+SELECT * FROM products
+WHERE price BETWEEN 10 AND 100
+AND category IN ('Electronics', 'Books')
+ORDER BY price DESC, name ASC;
+
+-- String operations for test data validation
+SELECT * FROM users
+WHERE email LIKE '%@gmail.com'
+AND username NOT LIKE 'test%';
+
+-- Date operations
+SELECT * FROM orders
+WHERE order_date >= CURRENT_DATE - INTERVAL 7 DAY;
+
+-- Aggregate functions for data validation
+SELECT
+    COUNT(*) as total_users,
+    COUNT(DISTINCT email) as unique_emails,
+    AVG(age) as average_age,
+    MIN(created_date) as first_registration,
+    MAX(created_date) as latest_registration
+FROM users;</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>JOINs for Data Validation</h3>
+                        <pre><code class="language-sql">-- INNER JOIN to verify relationships
+SELECT u.username, u.email, p.first_name, p.last_name
+FROM users u
+INNER JOIN profiles p ON u.id = p.user_id
+WHERE u.status = 'active';
+
+-- LEFT JOIN to find orphaned records
+SELECT u.username, o.order_id
+FROM users u
+LEFT JOIN orders o ON u.id = o.user_id
+WHERE o.order_id IS NULL; -- Users with no orders
+
+-- Multiple JOINs for complex validation
+SELECT
+    u.username,
+    COUNT(o.order_id) as order_count,
+    SUM(oi.quantity * oi.price) as total_spent
+FROM users u
+LEFT JOIN orders o ON u.id = o.user_id
+LEFT JOIN order_items oi ON o.order_id = oi.order_id
+GROUP BY u.id, u.username
+HAVING total_spent > 1000;
+
+-- Subqueries for data integrity checks
+SELECT * FROM orders
+WHERE user_id NOT IN (
+    SELECT id FROM users WHERE status = 'active'
+); -- Orders from inactive users</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Test Data Management</h3>
+                        <pre><code class="language-sql">-- Creating test data
+INSERT INTO users (username, email, password, status, created_date)
+VALUES
+    ('testuser1', 'test1@example.com', 'hashedpass1', 'active', NOW()),
+    ('testuser2', 'test2@example.com', 'hashedpass2', 'active', NOW()),
+    ('testuser3', 'test3@example.com', 'hashedpass3', 'inactive', NOW());
+
+-- Updating test data
+UPDATE users
+SET status = 'inactive', updated_date = NOW()
+WHERE username LIKE 'test%';
+
+-- Creating test orders
+INSERT INTO orders (user_id, order_date, status, total_amount)
+SELECT
+    id as user_id,
+    NOW() as order_date,
+    'pending' as status,
+    ROUND(RAND() * 500 + 50, 2) as total_amount
+FROM users
+WHERE username LIKE 'test%';
+
+-- Cleanup test data
+DELETE FROM order_items
+WHERE order_id IN (
+    SELECT order_id FROM orders o
+    JOIN users u ON o.user_id = u.id
+    WHERE u.username LIKE 'test%'
+);
+
+DELETE FROM orders
+WHERE user_id IN (
+    SELECT id FROM users WHERE username LIKE 'test%'
+);
+
+DELETE FROM users WHERE username LIKE 'test%';</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Database Testing Queries</h3>
+                        <pre><code class="language-sql">-- Data integrity checks
+-- Check for duplicate emails
+SELECT email, COUNT(*)
+FROM users
+GROUP BY email
+HAVING COUNT(*) > 1;
+
+-- Check referential integrity
+SELECT 'Orphaned orders' as issue, COUNT(*) as count
+FROM orders o
+LEFT JOIN users u ON o.user_id = u.id
+WHERE u.id IS NULL
+
+UNION ALL
+
+SELECT 'Orders without items' as issue, COUNT(*) as count
+FROM orders o
+LEFT JOIN order_items oi ON o.order_id = oi.order_id
+WHERE oi.order_id IS NULL;
+
+-- Performance testing queries
+-- Find slow queries candidates
+SELECT
+    table_name,
+    column_name,
+    COUNT(*) as record_count
+FROM information_schema.columns c
+JOIN (
+    SELECT table_name, table_rows
+    FROM information_schema.tables
+    WHERE table_schema = 'your_database'
+    AND table_rows > 100000
+) t ON c.table_name = t.table_name
+WHERE c.table_schema = 'your_database';
+
+-- Boundary value testing
+-- Test minimum/maximum values
+SELECT
+    MIN(price) as min_price,
+    MAX(price) as max_price,
+    AVG(price) as avg_price
+FROM products;
+
+-- Check for edge cases
+SELECT * FROM users WHERE created_date = '1900-01-01'; -- Invalid dates
+SELECT * FROM products WHERE price <= 0; -- Invalid prices
+SELECT * FROM users WHERE email = ''; -- Empty required fields</code></pre>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Database Connection in Java</h3>
+                        <pre><code class="language-java">// Database connection utility
+import java.sql.*;
+
+public class DatabaseUtil {
+    private static final String URL = "jdbc:mysql://localhost:3306/testdb";
+    private static final String USERNAME = "testuser";
+    private static final String PASSWORD = "testpass";
+
+    public static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(URL, USERNAME, PASSWORD);
+    }
+
+    // Execute SELECT query and return results
+    public static ResultSet executeQuery(String query) throws SQLException {
+        Connection conn = getConnection();
+        Statement stmt = conn.createStatement();
+        return stmt.executeQuery(query);
+    }
+
+    // Execute INSERT/UPDATE/DELETE and return affected rows
+    public static int executeUpdate(String query) throws SQLException {
+        try (Connection conn = getConnection();
+             Statement stmt = conn.createStatement()) {
+            return stmt.executeUpdate(query);
+        }
+    }
+
+    // Prepared statement for safe parameter binding
+    public static ResultSet executeQuery(String query, Object... params) throws SQLException {
+        Connection conn = getConnection();
+        PreparedStatement pstmt = conn.prepareStatement(query);
+
+        for (int i = 0; i < params.length; i++) {
+            pstmt.setObject(i + 1, params[i]);
+        }
+
+        return pstmt.executeQuery();
+    }
+}
+
+// Example test class using database validation
+public class DatabaseTest {
+
+    @Test
+    public void testUserCreation() throws SQLException {
+        // Create test user
+        String insertUser = "INSERT INTO users (username, email) VALUES (?, ?)";
+        DatabaseUtil.executeUpdate(insertUser, "testuser", "test@example.com");
+
+        // Verify user was created
+        String selectUser = "SELECT * FROM users WHERE username = ?";
+        ResultSet rs = DatabaseUtil.executeQuery(selectUser, "testuser");
+
+        assertTrue(rs.next());
+        assertEquals("testuser", rs.getString("username"));
+        assertEquals("test@example.com", rs.getString("email"));
+
+        // Cleanup
+        String deleteUser = "DELETE FROM users WHERE username = ?";
+        DatabaseUtil.executeUpdate(deleteUser, "testuser");
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quick-ref" class="section">
+            <div class="container">
+                <h2>⚡ Quick Reference & Cheat Sheets</h2>
+
+                <div class="quick-ref-grid">
+                    <div class="ref-card">
+                        <h3>🧪 Manual Testing Checklist</h3>
+                        <ul>
+                            <li>✅ Functional requirements covered</li>
+                            <li>✅ Boundary value testing done</li>
+                            <li>✅ Negative test cases included</li>
+                            <li>✅ UI/UX validation completed</li>
+                            <li>✅ Cross-browser testing done</li>
+                            <li>✅ Mobile responsiveness checked</li>
+                            <li>✅ Performance baseline recorded</li>
+                            <li>✅ Security vulnerabilities tested</li>
+                            <li>✅ Accessibility standards met</li>
+                            <li>✅ Documentation updated</li>
+                        </ul>
+                    </div>
+
+                    <div class="ref-card">
+                        <h3>🌐 Selenium Best Practices</h3>
+                        <ul>
+                            <li>📍 Use CSS selectors over XPath when possible</li>
+                            <li>⏰ Implement explicit waits, avoid Thread.sleep()</li>
+                            <li>🎯 Follow Page Object Model pattern</li>
+                            <li>🔄 Use fluent interfaces for readable tests</li>
+                            <li>📷 Take screenshots on failures</li>
+                            <li>🧹 Close drivers in @AfterMethod</li>
+                            <li>🔧 Use WebDriverManager for driver setup</li>
+                            <li>📊 Log test actions for debugging</li>
+                            <li>🎭 Handle alerts and popups gracefully</li>
+                            <li>🔀 Use TestNG/JUnit data providers</li>
+                        </ul>
+                    </div>
+
+                    <div class="ref-card">
+                        <h3>🔌 API Testing Essentials</h3>
+                        <ul>
+                            <li>✅ Validate status codes (200, 201, 400, 404, 500)</li>
+                            <li>🔍 Check response time and performance</li>
+                            <li>📋 Validate JSON schema and structure</li>
+                            <li>🔐 Test authentication and authorization</li>
+                            <li>📊 Verify headers and content-type</li>
+                            <li>🔄 Test CRUD operations thoroughly</li>
+                            <li>❌ Include negative test scenarios</li>
+                            <li>📏 Test payload size limits</li>
+                            <li>🔗 Validate data relationships</li>
+                            <li>📝 Document API endpoints tested</li>
+                        </ul>
+                    </div>
+
+                    <div class="ref-card">
+                        <h3>📱 Mobile Testing Focus Areas</h3>
+                        <ul>
+                            <li>📱 Test on multiple devices and OS versions</li>
+                            <li>🔄 Verify app behavior on orientation change</li>
+                            <li>📶 Test with different network conditions</li>
+                            <li>🔋 Monitor battery usage during testing</li>
+                            <li>💾 Test app behavior with low storage</li>
+                            <li>📞 Handle interruptions (calls, messages)</li>
+                            <li>👆 Test touch gestures and interactions</li>
+                            <li>🎚️ Verify accessibility features</li>
+                            <li>📦 Test app installation and updates</li>
+                            <li>🔒 Validate app permissions and security</li>
+                        </ul>
+                    </div>
+
+                    <div class="ref-card">
+                        <h3>🗃️ SQL Testing Queries</h3>
+                        <div class="code-block">
+                            <pre><code class="language-sql">-- Count records
+SELECT COUNT(*) FROM table_name;
+
+-- Find duplicates
+SELECT column, COUNT(*)
+FROM table GROUP BY column
+HAVING COUNT(*) > 1;
+
+-- Check nulls
+SELECT * FROM table
+WHERE required_field IS NULL;
+
+-- Date range
+SELECT * FROM table
+WHERE date_field BETWEEN
+'2024-01-01' AND '2024-12-31';
+
+-- Performance check
+SELECT COUNT(*) FROM large_table
+WHERE indexed_column = 'value';</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="ref-card">
+                        <h3>🛠️ Common Bug Classifications</h3>
+                        <div class="bug-severity">
+                            <p><strong>🔴 Critical:</strong> System crash, data corruption, security breach</p>
+                            <p><strong>🟠 High:</strong> Major feature broken, workflow blocked</p>
+                            <p><strong>🟡 Medium:</strong> Minor feature issue, workaround available</p>
+                            <p><strong>🟢 Low:</strong> Cosmetic issues, typos, minor UI problems</p>
+                        </div>
+                        <div class="bug-priority">
+                            <p><strong>P1:</strong> Fix immediately</p>
+                            <p><strong>P2:</strong> Fix in current sprint</p>
+                            <p><strong>P3:</strong> Fix in next release</p>
+                            <p><strong>P4:</strong> Fix when time permits</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools-section">
+                    <h3>🛠️ Essential QA Tools & Resources</h3>
+                    <div class="tools-grid">
+                        <div class="tool-category">
+                            <h4>Test Management</h4>
+                            <ul>
+                                <li>Jira + Xray</li>
+                                <li>TestRail</li>
+                                <li>Azure DevOps</li>
+                                <li>qTest</li>
+                            </ul>
+                        </div>
+                        <div class="tool-category">
+                            <h4>API Testing</h4>
+                            <ul>
+                                <li>Postman</li>
+                                <li>REST Assured</li>
+                                <li>SoapUI</li>
+                                <li>Insomnia</li>
+                            </ul>
+                        </div>
+                        <div class="tool-category">
+                            <h4>Performance</h4>
+                            <ul>
+                                <li>JMeter</li>
+                                <li>LoadRunner</li>
+                                <li>Gatling</li>
+                                <li>K6</li>
+                            </ul>
+                        </div>
+                        <div class="tool-category">
+                            <h4>Security</h4>
+                            <ul>
+                                <li>OWASP ZAP</li>
+                                <li>Burp Suite</li>
+                                <li>Nessus</li>
+                                <li>SonarQube</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 QA Engineer's Handbook. A comprehensive reference for quality assurance professionals.</p>
+            <p>Keep testing, keep learning! 🚀</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

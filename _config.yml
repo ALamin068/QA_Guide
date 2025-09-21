@@ -1,0 +1,67 @@
+# GitHub Pages Configuration for QA Handbook
+
+# Site settings
+title: "QA Engineer's Handbook"
+description: "A comprehensive reference guide for manual testing, automation, and quality assurance best practices"
+author: "Your Name"
+email: "your.email@example.com"
+
+# GitHub Pages settings
+url: "https://yourusername.github.io"
+baseurl: "/qa-handbook"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+
+# Include files that start with underscore
+include:
+  - _pages
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+lang: en_US
+logo: /assets/images/logo.png
+
+# Social links (optional)
+github_username: yourusername
+linkedin_username: yourlinkedin
+
+# Google Analytics (optional)
+# google_analytics: UA-XXXXXXXX-X
+
+# Collections (optional, for future expansion)
+collections:
+  guides:
+    output: true
+    permalink: /:collection/:name/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
