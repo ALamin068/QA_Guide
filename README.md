@@ -4,7 +4,7 @@ A comprehensive reference guide for manual testing, automation, and quality assu
 
 ## 🌐 Live Website
 
-Visit the handbook at: `https://yourusername.github.io/qa-handbook`
+Visit the handbook at: `https://alamin068.github.io/QA_Guide/`
 
 ## 📚 What's Included
 
